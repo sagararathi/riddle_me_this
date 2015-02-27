@@ -1,4 +1,9 @@
-1require 'spec_helper'
+require 'rails_helper'
+
+# before :each do
+#   stub_current_user
+
+# end
 
 describe RiddlesController do
   let(:riddle) { FactoryGirl.create :riddle }
@@ -21,8 +26,8 @@ describe RiddlesController do
     it "creates the todo if valid params" do
 
       post :create, riddle: {
-        title: 'Riddle 1'
-        body: 'Riddle to Riddle'
+        title: 'Riddle 1',
+        body: 'Riddle to Riddle',
         answer: 'Hard to answer'
       }
 
