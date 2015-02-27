@@ -17,5 +17,17 @@ describe RiddlesController do
     end
   end
 
+  describe "#create" do
+    it "creates the todo if valid params" do
 
+      post :create, riddle: {
+        title: 'Riddle 1'
+        body: 'Riddle to Riddle'
+        answer: 'Hard to answer'
+      }
+
+      expect(response).to redirect_to '/'
+
+    end
+  end
 end
