@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+<<<<<<< HEAD
 describe 'CommentsController' do
 	let (:user) { FactoryGirl.create :user }
 	let (:riddle) { FactoryGirl.create :riddle }
@@ -67,6 +68,11 @@ describe 'CommentsController' do
 			}.to change { comment.reload.title }.to('Not a cool riddle')
 		end
 	end
+=======
+describe 'comments controller'
+
+	it 'creates ' do
+>>>>>>> 3f2510e7bff7ca80c07e98f08d9e8d416d921619
 
 	describe '#destroy' do
 		it 'should remove the comment' do

@@ -1,7 +1,20 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :riddles do
     resources :comments, except: [:index, :show]
   end
+=======
+  resources :riddles
+
+  get 'signup/new' => 'sessions#new'
+  post 'signup' => 'sessions#create'
+
+  get 'login' => 'sessions#login', as: :login
+  post 'login' => 'sessions#login'
+
+  get 'logout' => 'sessions#logout', as: :logout
+
+>>>>>>> 3f2510e7bff7ca80c07e98f08d9e8d416d921619
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

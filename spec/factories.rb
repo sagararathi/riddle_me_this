@@ -1,4 +1,5 @@
 FactoryGirl.define do
+<<<<<<< HEAD
 	factory :comment do
 		body { Faker::Lorem.paragraph }
 		user_id { 1 }
@@ -21,4 +22,12 @@ FactoryGirl.define do
 		answer { Faker::Lorem.sentence }
 		user_id { 1 }
 	end
+=======
+  factory :riddle do
+     sequence(:title) { |n| "Title #{n}" }
+     body "Body Here"
+     answer "Answer here"
+    user_id '1'
+  end
+>>>>>>> 3f2510e7bff7ca80c07e98f08d9e8d416d921619
 end
