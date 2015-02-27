@@ -1,8 +1,8 @@
 require_relative 'spec_helper'
 
-describe 'comments controller' 
+describe 'comments controller'
 
-	it 'creates ' do 
+	it 'creates ' do
 
 	end
 
