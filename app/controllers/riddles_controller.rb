@@ -1,5 +1,4 @@
 class RiddlesController < ApplicationController
-  skip_before_filter :ensure_current_user
   def index
     @riddles = Riddle.all
   end
@@ -35,10 +34,10 @@ class RiddlesController < ApplicationController
   end
 
   def destroy
-    riddle = Riddle.find(params[:id])
+    riddle = Riddle.find_by(id: params[:id])
 
     riddle.destroy
-    redirect_to 'index'
+    redirect_to riddles_path
   end
 
   private

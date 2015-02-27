@@ -6,6 +6,9 @@
 <div id='riddle_ans'>
   <%= @riddle.answer %>
 </div>
-<%= link_to 'edit', edit_riddle_path(@riddle) %>
-<%= link_to 'delete', riddles_path(@riddle), :method => 'delete' %>
+<%= button_to 'edit', edit_riddle_path(@riddle), method: :get %>
 </div>
+
+<%= form_for(@riddle, :method => :delete) do |f| %>
+  <%= f.submit "Delete"%>
+<% end %>
