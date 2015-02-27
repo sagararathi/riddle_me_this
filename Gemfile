@@ -30,8 +30,8 @@ gem 'table_print'
 # Used for faker-ing
 gem 'faker'
 
-# Use factory girl
-gem 'factory_girl'
+# Use factory girl for rails
+gem 'factory_girl_rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
