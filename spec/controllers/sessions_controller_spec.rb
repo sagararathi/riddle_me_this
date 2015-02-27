@@ -1,6 +1,7 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe "SessionsController" do
+describe SessionsController do
   context "new" do
     it "is successful" do
       get :new
@@ -9,7 +10,7 @@ describe "SessionsController" do
   end
 
   context "create" do
-    let(:user){User.create(username: "test", email: "test@test.com", password: "123")}
+    let!(:user){User.create(username: "test", email: "test@test.com", password: "123")}
     it "redirects to root path if valid user" do
       post :create, :username => user.username, email: user.email, :password => user.password
       expect(response).to redirect_to root_path
