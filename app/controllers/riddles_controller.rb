@@ -1,6 +1,7 @@
 class RiddlesController < ApplicationController
   def index
-    @riddles = Riddle.all
+    @ans_riddles = Riddle.where('answer IS NOT NULL')
+    @uns_riddles = Riddle.where('answer IS NULL')
   end
 
   def new
