@@ -50,7 +50,12 @@ describe RiddlesController do
 
       expect(response).to be_redirect
     end
+  end
 
-
+  describe "#destroy" do
+    it "delete the post" do
+      delete :destroy, id: riddle.id
+      expect(response).to be_redirect
+    end
   end
 end
