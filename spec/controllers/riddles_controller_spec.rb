@@ -28,10 +28,11 @@ describe RiddlesController do
       post :create, riddle: {
         title: 'Riddle 1',
         body: 'Riddle to Riddle',
-        answer: 'Hard to answer'
+        answer: 'Hard to answer',
+        user_id: 1
       }
 
-      expect(response).to redirect_to '/'
+      expect(response).to redirect_to 'show'
 
     end
   end
