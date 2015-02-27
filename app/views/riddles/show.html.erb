@@ -1,9 +1,11 @@
 <div>
 <h2> <%= @riddle.title %></h2>
-<div id=riddle_body>
+<div id='riddle_body'>
   <%= @riddle.body %>
 </div>
-<div id=riddle_ans>
+<div id='riddle_ans'>
   <%= @riddle.answer %>
 </div>
+<%= link_to 'edit', edit_riddle_path(@riddle) %>
+<%= link_to 'delete', riddles_path(@riddle), :method => 'delete' %>
 </div>
