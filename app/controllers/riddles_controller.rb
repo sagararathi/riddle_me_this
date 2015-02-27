@@ -34,6 +34,11 @@ class RiddlesController < ApplicationController
     end
   end
 
+  def destroy
+    find_riddle(params[:id]).destroy
+    redirect_to 'index'
+  end
+
   private
 
   def riddle_params
