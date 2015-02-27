@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_filter :ensure_current_user
 
   def index
     # if current_user
