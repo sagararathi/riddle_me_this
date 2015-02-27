@@ -1,7 +1,7 @@
 class RiddlesController < ApplicationController
-
+  skip_before_filter :ensure_current_user
   def index
-    @riddle = Riddle.all
+    @riddles = Riddle.all
   end
 
   def new
