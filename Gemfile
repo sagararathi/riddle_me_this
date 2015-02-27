@@ -26,6 +26,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# View tables in the console when querying the database
+gem 'table_print'
+
+# Used for faker-ing
+gem 'faker'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
