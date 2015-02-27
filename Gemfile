@@ -31,7 +31,7 @@ gem 'table_print'
 gem 'faker'
 
 # Use factory girl
-gem 'factory_girl'
+gem 'factory_girl_rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
