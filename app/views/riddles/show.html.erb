@@ -1,0 +1,10 @@
+<div>
+
+  <h1><%= @riddle.title  %></h1>
+  	<br>
+  	<h3>Comments:</h3>
+  	<% @riddle.comments.each do |comment| %>
+  		<%= comment.body %>
+  	<% end %>
+
+</div>
