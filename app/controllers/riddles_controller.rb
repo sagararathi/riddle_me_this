@@ -21,6 +21,19 @@ class RiddlesController < ApplicationController
     end
   end
 
+  def edit
+    find_riddle(params[:id])
+  end
+
+  def update
+    find_riddle(params[:id])
+    if @riddle.update_attributes(riddle_params)
+      redirect_to @riddle
+    else
+      render :new
+    end
+  end
+
   private
 
   def riddle_params
