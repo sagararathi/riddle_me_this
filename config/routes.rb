@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   resources :riddles
+
+  get 'signup/new' => 'sessions#new'
+  post 'signup' => 'sessions#create'
+
+  get 'login' => 'sessions#login', as: :login
+  post 'login' => 'sessions#login'
+
+  get 'logout' => 'sessions#logout', as: :logout
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
