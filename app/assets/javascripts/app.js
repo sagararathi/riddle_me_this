@@ -2,6 +2,10 @@ $(document).ready(function(){
   $('.show_ans').on("submit", function(event){
     event.preventDefault()
     $('#riddle_ans').show();
-    console.log("hey")
   })
+
+  $('.show_new_form').on("click", function(){
+    $('.new_comment_form').toggle()
+  })
+
 })
