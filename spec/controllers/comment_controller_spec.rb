@@ -1,16 +1,15 @@
 require 'rails_helper'
 require 'spec_helper'
 
-<<<<<<< HEAD
 describe 'CommentsController' do
 	let (:user) { FactoryGirl.create :user }
 	let (:riddle) { FactoryGirl.create :riddle }
 	let (:comment) { FactoryGirl.create :comment }
 
 	before do
-		user
-		riddle
-		comment
+	  user
+	  riddle
+	  comment
 	end
 
 	# This might be helpful in the 'riddle#show'
@@ -36,7 +35,7 @@ describe 'CommentsController' do
 
 	describe '#new' do
 		it 'assigns the comment to Comment.new' do
-			get :new
+			get :new, :riddle_id => riddle.id
 			expect(assigns(:comment)).to be_a_new(Comment)
 		end
 	end
