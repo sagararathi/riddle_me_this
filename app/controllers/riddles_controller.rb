@@ -50,5 +50,4 @@ class RiddlesController < ApplicationController
   def find_riddle id
     @riddle = Riddle.find(id)
   end
->>>>>>> 3f2510e7bff7ca80c07e98f08d9e8d416d921619
 end

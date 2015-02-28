@@ -1,8 +1,5 @@
 require 'rails_helper'
-<<<<<<< HEAD
-=======
 require 'spec_helper'
->>>>>>> 55c0c48e7ea412ca75d377abae66db44ebd15c11
 
 describe 'SessionsController' do
   context "new" do
