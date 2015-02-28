@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :riddles
+  resources :riddles do
+    resources :riddle_votes
+  end
 
   root 'sessions#index'
+
 
   get 'signup/new' => 'sessions#new'
   post 'signup' => 'sessions#create'
