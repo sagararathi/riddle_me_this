@@ -27,7 +27,7 @@ describe RiddlesController do
         user_id: 1
       }
 
-      expect(response).to redirect_to 'show'
+      expect(response).to be_redirect
     end
   end
 
