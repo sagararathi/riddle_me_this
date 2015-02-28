@@ -14,8 +14,10 @@
 <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans'  %>
 
 <%= button_to 'edit', edit_riddle_path(@riddle), method: :get %>
-</div>
 
 <%= form_for(@riddle, :method => :delete) do |f| %>
   <%= f.submit "Delete"%>
 <% end %>
+</div>
+
+<%= render partial: 'comments/index', locals: {riddle: @riddle} %>
