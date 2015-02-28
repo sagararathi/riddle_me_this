@@ -252,4 +252,3 @@ answer: "One night can also mean one knight. That makes four: one knight, a butc
 
 Riddle.create( title: "What instrument can you...", body: "What instrument can you hear but never see?",
 answer: "Your voice! You can sing with your voice like an instrument and hear it, but no one can see it!", user_id: (rand(10) + 1) )
->>>>>>> master
