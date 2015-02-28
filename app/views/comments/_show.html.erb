@@ -1,13 +1,18 @@
 <div class="comment">
-	<p><%= comment.body %><p>
+	<p><%= comment.body %></p>
 	<div class="comment_tags">
-		By: <%= comment.user.username %>
+		<p>By: <%= comment.user.username %></p>
 			<% if comment.created_at.to_i == comment.updated_at.to_i %>
-				At:
+				<p>At:
 			<% else %>
 				Edited at:
 			<% end %>
-			<%= comment.updated_at.ctime %>
-			<!-- Not sure if this formatting will put the timestamp on the same line as the Edited or At markers, might need to nest the erb tag inside of each of the conditionals -->
+			<%= comment.updated_at.ctime %></p>
+	</div>
+	<div class="comment_mods">
+		<% if session[:user_id] == comment.user_id %>
+			<%= link_to "Edit", edit_riddle_comment_path(@riddle, comment) %>
+			<%= link_to "Delete", riddle_comment_path(@riddle, comment), data: { confirm: 'Are you sure you want to delete your comment?' }, method: :delete %>
+		<% end %>
 	</div>
 </div>
