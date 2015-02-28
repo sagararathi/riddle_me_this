@@ -49,7 +49,11 @@ skip_before_filter :ensure_current_user
   private
 
   def riddle_params
-    params.require(:riddle).permit(:title, :body, :answer).merge(user_id: current_user.id)
+    riddle_p = params.require(:riddle).permit(:title, :body, :answer).merge(user_id: current_user.id)
+    if /\w/.match(riddle_p[:answer]) == nil
+      riddle_p[:answer] = nil
+    end
+    riddle_p
   end
 
   def find_riddle id
@@ -58,4 +62,5 @@ skip_before_filter :ensure_current_user
   def vote_count id
     @count = RiddleVote.where(riddle_id: id).count
   end
+
 end
