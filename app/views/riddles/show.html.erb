@@ -4,7 +4,7 @@
   <%= @riddle.body %>
 </div>
 
-<div id='riddle_ans'>
+<div id='riddle_ans' class='initiallyHidden'>
   <%= @riddle.answer %>
 </div>
 <%= form_for([@riddle, @riddle_vote]) do |f| %>
@@ -13,7 +13,7 @@
   <%= @count %>
 <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans'  %>
 
-<%= button_to 'edit', edit_riddle_path(@riddle), method: :get %>
+<%= button_to 'Edit', edit_riddle_path(@riddle), method: :get %>
 
 <%= form_for(@riddle, :method => :delete) do |f| %>
   <%= f.submit "Delete"%>
