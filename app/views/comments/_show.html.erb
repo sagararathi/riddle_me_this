@@ -1,6 +1,10 @@
 <div class="comment">
 	<p><%= comment.body %><p>
 	<div class="comment_tags">
+		<%= form_for([riddle, comment, CommentVote.new]) do |f| %>
+  <%= f.submit "Up Vote"%>
+<% end %>
+	<%= comment.vote_count %>
 		By: <%= comment.user.username %>
 			<% if comment.created_at.to_i == comment.updated_at.to_i %>
 				At:
