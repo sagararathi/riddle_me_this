@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <%= link_to "Back", :back %> |
+    <%= link_to "Home", root_path %> |
     <% if current_user %>
       <%= link_to "Submit Riddle", new_riddle_path %> |
       <%= link_to "Logout", logout_path %>
