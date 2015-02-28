@@ -10,14 +10,20 @@
 <%= form_for([@riddle, @riddle_vote]) do |f| %>
   <%= f.submit "Up"%>
 <% end %>
-  <%= @count %>
-<%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans'  %>
+  <%= @count %> upvotes
 
-<%= button_to 'edit', edit_riddle_path(@riddle), method: :get %>
-
-<%= form_for(@riddle, :method => :delete) do |f| %>
-  <%= f.submit "Delete"%>
+<% if @riddle.answer %>
+  <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn"  %>
 <% end %>
+
+
+<% if @riddle.user_id == current_user.id %>
+  <%= button_to 'edit', edit_riddle_path(@riddle), method: :get %>
+  <%= form_for(@riddle, :method => :delete) do |f| %>
+    <%= f.submit "Delete"%>
+  <% end %>
+<% end %>
+
 </div>
 
 <%= render partial: 'comments/index', locals: {riddle: @riddle} %>
