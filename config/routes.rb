@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :riddles do
-    resources :comments, except: [:index, :show]
+    resources :comments, except: [:index, :show] do
+      resources :comment_votes, only: [:create]
+    end
     resources :riddle_votes, only: [:create]
   end
 
