@@ -7,7 +7,10 @@
 <div id='riddle_ans'>
   <%= @riddle.answer %>
 </div>
-
+<%= form_for([@riddle, @riddle_vote]) do |f| %>
+  <%= f.submit "Up"%>
+<% end %>
+  <%= @count %>
 <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans'  %>
 
 <%= button_to 'edit', edit_riddle_path(@riddle), method: :get %>
