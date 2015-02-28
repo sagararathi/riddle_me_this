@@ -6,11 +6,13 @@ Rails.application.routes.draw do
 =======
   resources :riddles
 
+  root 'sessions#index'
+
   get 'signup/new' => 'sessions#new'
   post 'signup' => 'sessions#create'
 
-  get 'login' => 'sessions#login', as: :login
-  post 'login' => 'sessions#login'
+  get 'login' => 'sessions#login_form', as: "login_form"
+  post 'login' => 'sessions#login', as: "login"
 
   get 'logout' => 'sessions#logout', as: :logout
 

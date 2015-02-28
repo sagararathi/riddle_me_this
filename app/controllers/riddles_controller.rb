@@ -1,11 +1,4 @@
 class RiddlesController < ApplicationController
-<<<<<<< HEAD
-  
-  def show
-  	@riddle = Riddle.find_by_id(params[:id])
-  end
-
-=======
 
   def index
     @riddle = Riddle.all
@@ -22,7 +15,7 @@ class RiddlesController < ApplicationController
   def create
     @riddle = Riddle.new riddle_params
     if @riddle.save
-      redirect_to 'show'
+      redirect_to @riddle
     else
       render :new
     end
@@ -42,7 +35,9 @@ class RiddlesController < ApplicationController
   end
 
   def destroy
-    find_riddle(params[:id]).destroy
+    riddle = Riddle.find(params[:id])
+
+    riddle.destroy
     redirect_to 'index'
   end
 

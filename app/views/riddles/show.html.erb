@@ -1,21 +1,11 @@
 <div>
-<<<<<<< HEAD
-
-  <h1><%= @riddle.title  %></h1>
-  	<br>
-  	<h3>Comments:</h3>
-  	<% @riddle.comments.each do |comment| %>
-  		<%= comment.body %>
-  	<% end %>
-
-</div>
-=======
 <h2> <%= @riddle.title %></h2>
-<div id=riddle_body>
+<div id='riddle_body'>
   <%= @riddle.body %>
 </div>
-<div id=riddle_ans>
+<div id='riddle_ans'>
   <%= @riddle.answer %>
 </div>
+<%= link_to 'edit', edit_riddle_path(@riddle) %>
+<%= link_to 'delete', riddles_path(@riddle), :method => 'delete' %>
 </div>
->>>>>>> 3f2510e7bff7ca80c07e98f08d9e8d416d921619
