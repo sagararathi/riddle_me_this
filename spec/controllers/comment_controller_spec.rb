@@ -1,11 +1,12 @@
 require 'rails_helper'
+require 'spec_helper'
 
 describe 'CommentsController' do
 	let (:user) { FactoryGirl.create :user }
 	let (:riddle) { FactoryGirl.create :riddle }
-	let (:comment) { FactoryGirl.create :comment } 
+	let (:comment) { FactoryGirl.create :comment }
 
-	before do 
+	before do
 		user
 		riddle
 		comment
@@ -14,7 +15,7 @@ describe 'CommentsController' do
 	# This might be helpful in the 'riddle#show'
 	# describe '#index' do
 
-	# 	it 'should display all comments' do 
+	# 	it 'should display all comments' do
 	# 		get :index
 	# 		expect(response).to be_success
 	# 		expect(response.body).to include (comment.body)
