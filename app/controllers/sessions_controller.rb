@@ -1,14 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_filter :ensure_current_user
 
-  def index
-    # if current_user
-    #   render :'riddles/index'
-    # else
-    #   redirect_to login_path
-    # end
-  end
-
   def new
     @user = User.new
   end

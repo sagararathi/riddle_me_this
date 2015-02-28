@@ -3,10 +3,16 @@
 <div id='riddle_body'>
   <%= @riddle.body %>
 </div>
+
 <div id='riddle_ans'>
   <%= @riddle.answer %>
 </div>
-<%= link_to 'edit', edit_riddle_path(@riddle) %>
-<%= link_to 'delete', riddle_path(@riddle), :method => 'delete' %>
-<%= link_to 'Up'  %>
+
+<%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans'  %>
+
+<%= button_to 'edit', edit_riddle_path(@riddle), method: :get %>
 </div>
+
+<%= form_for(@riddle, :method => :delete) do |f| %>
+  <%= f.submit "Delete"%>
+<% end %>
