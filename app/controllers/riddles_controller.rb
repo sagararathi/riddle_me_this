@@ -3,8 +3,9 @@ class RiddlesController < ApplicationController
 skip_before_filter :ensure_current_user
 
   def index
-    @ans_riddles = Riddle.where('answer IS NOT NULL')
-    @uns_riddles = Riddle.where('answer IS NULL')
+    @ans_riddles = Riddle.top5(true)
+
+    @uns_riddles = Riddle.top5
   end
 
   def new
@@ -44,6 +45,16 @@ skip_before_filter :ensure_current_user
 
     riddle.destroy
     redirect_to riddles_path
+  end
+
+  def unanswered
+    @riddles = Riddle.all_in_order
+    render 'riddles/showall'
+  end
+
+  def answered
+    @riddles = Riddle.all_in_order true
+    render 'riddles/showall'
   end
 
   private
