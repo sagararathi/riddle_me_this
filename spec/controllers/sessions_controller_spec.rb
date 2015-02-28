@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'spec_helper'
 
-describe SessionsController do
+describe 'SessionsController' do
   context "new" do
     it "is successful" do
       get :new
