@@ -1,11 +1,11 @@
-<h1>Unanswered Riddles</h1>
+<h1><%=  link_to "Unanswered Riddles", unanswered_path %></h1>
 <% @uns_riddles.each do |r| %>
   <%= link_to "#{r.title}", riddle_path(r) %>
 <% end %>
 
 <br>
 
-<h1>Answered Riddle</h1>
+<h1> <%=  link_to "Answered Riddle", answered_path%></h1>
 <% @ans_riddles.each do |r| %>
   <%= link_to "#{r.title}", riddle_path(r) %>
 <% end %>
