@@ -1,13 +1,13 @@
 <div class="comment">
-	<p><%= @comment.body %><p>
+	<p><%= comment.body %><p>
 	<div class="comment_tags">
-		By: <%= @comment.user.username %>
-			<% if @comment.created_at != @comment.updated_at %>
-				Edited at:
-			<% else %>
+		By: <%= comment.user.username %>
+			<% if comment.created_at.to_i == comment.updated_at.to_i %>
 				At:
+			<% else %>
+				Edited at:
 			<% end %>
-			<%= @comment.created_at %>
+			<%= comment.updated_at.ctime %>
 			<!-- Not sure if this formatting will put the timestamp on the same line as the Edited or At markers, might need to nest the erb tag inside of each of the conditionals -->
 	</div>
 </div>
