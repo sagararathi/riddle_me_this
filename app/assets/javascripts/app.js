@@ -7,6 +7,10 @@ $(document).ready(function(){
     } else {
       $('.ans_btn').attr('value', "Show Answer")
     }
-
   })
+
+  $('.show_new_form').on("click", function(){
+    $('.new_comment_form').toggle()
+  })
+
 })
