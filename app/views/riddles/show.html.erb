@@ -4,7 +4,7 @@
   <%= @riddle.body %>
 </div>
 
-<div id='riddle_ans'>
+<div id='riddle_ans' class='initiallyHidden'>
   <%= @riddle.answer %>
 </div>
 <%= form_for([@riddle, @riddle_vote]) do |f| %>
