@@ -3,7 +3,7 @@ class RiddlesController < ApplicationController
 skip_before_filter :ensure_current_user
 
   def index
-    @ans_riddles = Riddle.top5(true)
+    @ans_riddles = Riddle.top5 true
 
     @uns_riddles = Riddle.top5
   end
