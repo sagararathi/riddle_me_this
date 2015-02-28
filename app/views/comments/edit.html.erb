@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h1>Edit your comment here:</h1>
+
+  <%= form_for [@riddle, @comment] do |f| %>
+    <%= f.label :comment %>:
+    <%= f.text_area :body %>
+
+    <%= f.submit %>
+  <% end %>
+
+  <%= button_to('Destroy', riddle_comment_path(@riddle, @comment), method: :delete) %>
+</div>
