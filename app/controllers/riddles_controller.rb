@@ -13,6 +13,8 @@ skip_before_filter :ensure_current_user
 
   def show
     find_riddle(params[:id])
+     @riddle_vote = RiddleVote.new
+     vote_count(params[:id])
   end
 
   def create
@@ -47,10 +49,13 @@ skip_before_filter :ensure_current_user
   private
 
   def riddle_params
-    params.require(:riddle).permit(:title, :body, :answer, :user_id)
+    params.require(:riddle).permit(:title, :body, :answer).merge(user_id: current_user.id)
   end
 
   def find_riddle id
     @riddle = Riddle.find(id)
+  end
+  def vote_count id
+    @count = RiddleVote.where(riddle_id: id).count
   end
 end
