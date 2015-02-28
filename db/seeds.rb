@@ -1,3 +1,39 @@
+NUM_USERS = 10
+NUM_RIDDLES = 73
+NUM_RIDDLE_VOTES = NUM_RIDDLES * 2
+NUM_COMMENTS = NUM_RIDDLES * 5
+NUM_COMMENT_VOTES = NUM_COMMENTS * 2
+
+(NUM_USERS).times do
+  User.create(
+    username: Faker::Internet.user_name,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password
+    )
+end
+
+(NUM_COMMENTS).times do
+  Comment.create(
+    body: Faker::Lorem.paragraph,
+    riddle_id: rand(1..NUM_RIDDLES),
+    user_id: rand(1..NUM_USERS)
+    )
+end
+
+(NUM_RIDDLE_VOTES).times do
+  RiddleVote.create(
+    riddle_id: rand(1..NUM_RIDDLES),
+    user_id: rand(1..NUM_USERS)
+    )
+end
+
+(NUM_COMMENT_VOTES).times do
+  CommentVote.create(
+    comment_id: rand(1..NUM_COMMENTS),
+    user_id: rand(1..NUM_USERS)
+    )
+end
+
 Riddle.create( title: "What has a foot but no ...", body: "What has a foot but no legs?",
 answer: "A snail", user_id: (rand(10) + 1) )
 
@@ -216,3 +252,4 @@ answer: "One night can also mean one knight. That makes four: one knight, a butc
 
 Riddle.create( title: "What instrument can you...", body: "What instrument can you hear but never see?",
 answer: "Your voice! You can sing with your voice like an instrument and hear it, but no one can see it!", user_id: (rand(10) + 1) )
+>>>>>>> master
