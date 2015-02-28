@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   resources :riddles do
     resources :comments, except: [:index, :show]
+    resources :riddle_votes
   end
 
-  root 'sessions#index'
+  root 'riddles#index'
+
 
   get 'signup/new' => 'sessions#new'
   post 'signup' => 'sessions#create'
