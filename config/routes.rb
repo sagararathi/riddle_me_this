@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   root 'riddles#index'
 
+
   get 'unanswered' => 'riddles#unanswered'
   get 'answered' => 'riddles#answered'
 
