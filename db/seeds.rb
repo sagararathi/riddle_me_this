@@ -1,3 +1,12 @@
+
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
 NUM_USERS = 10
 NUM_RIDDLES = 73
 NUM_RIDDLE_VOTES = NUM_RIDDLES * 2
@@ -251,4 +260,6 @@ Riddle.create( title: "One night, a butcher, a...", body: "One night, a butcher,
 answer: "One night can also mean one knight. That makes four: one knight, a butcher, a baker and a candlestick maker!", user_id: (rand(10) + 1) )
 
 Riddle.create( title: "What instrument can you...", body: "What instrument can you hear but never see?",
+
 answer: "Your voice! You can sing with your voice like an instrument and hear it, but no one can see it!", user_id: (rand(10) + 1) )
+
