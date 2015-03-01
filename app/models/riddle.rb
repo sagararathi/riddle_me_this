@@ -4,6 +4,7 @@ class Riddle < ActiveRecord::Base
   has_many :riddle_votes
 
   def self.top5 answered_only = false
+
     result = []
     relation = select("riddles.id, count(riddle_votes.id) AS vote_count").
     joins(:riddle_votes).
@@ -39,6 +40,4 @@ class Riddle < ActiveRecord::Base
     def vote_count
       riddle_votes.count
     end
-
-
 end
