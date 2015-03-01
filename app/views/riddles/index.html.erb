@@ -1,8 +1,8 @@
 <h1><%=  link_to "Unanswered Riddles", unanswered_path %></h1>
 <% @uns_riddles.each do |r| %>
 <div>
-  <%= r.vote_count %>
   <%= link_to "#{r.title}", riddle_path(r) %>
+   | <%= r.vote_count %> upvotes
 </div>
 <% end %>
 
@@ -11,7 +11,7 @@
 <h1> <%=  link_to "Answered Riddle", answered_path%></h1>
 <% @ans_riddles.each do |r| %>
 <div>
-  <%= r.vote_count %>
   <%= link_to "#{r.title}", riddle_path(r) %>
+   | <%= r.vote_count %> upvotes
 </div>
 <% end %>
