@@ -3,9 +3,9 @@ class RiddlesController < ApplicationController
 skip_before_filter :ensure_current_user
 
   def index
-    @ans_riddles = Riddle.top5 true
+    @ans_riddles = Riddle.where('answer is not null').sort_by {|r| r.riddle_votes.count}.reverse[0..5]
 
-    @uns_riddles = Riddle.top5
+    @uns_riddles = Riddle.where('answer is null').sort_by {|r| r.riddle_votes.count}.reverse[0..5]
   end
 
   def new
@@ -48,12 +48,12 @@ skip_before_filter :ensure_current_user
   end
 
   def unanswered
-    @riddles = Riddle.all_in_order
+    @riddles = Riddle.where('answer is null').sort_by {|r| r.riddle_votes.count}.reverse
     render 'riddles/showall'
   end
 
   def answered
-    @riddles = Riddle.all_in_order true
+    @riddles = Riddle.where('answer is not null').sort_by {|r| r.riddle_votes.count}.reverse
     render 'riddles/showall'
   end
 
