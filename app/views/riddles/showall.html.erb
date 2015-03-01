@@ -1,6 +1,7 @@
 <% @riddles.each do |r| %>
 <div>
-  <%= r.vote_count %>
   <%= link_to "#{r.title}", riddle_path(r) %>
+   | <%= r.vote_count %> upvotes
+   | <%= r.comments.count %> comments
 </div>
 <% end %>
