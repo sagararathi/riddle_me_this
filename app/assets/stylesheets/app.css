@@ -157,9 +157,34 @@ input:focus, textarea { outline: none !important; }
   color: #212121;
   font-family: 'Quicksand', sans-serif;
   padding-bottom: 15px;
-  border-bottom: 1px solid #c0c0c0;
+  border-bottom: 1px solid #C0C0C0;
+  font-size: 35px;
 }
 
-.title a:visited {
+.title a:visited, .riddle-link a:visited, .riddle-link a {
   color: #212121;
+}
+
+.riddle-link {
+  border-bottom: 1px solid #C0C0C0;
+  padding: 25px;
+}
+
+.riddle-link a {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: #777;
+}
+
+.riddle-link a, .riddle-link a:visited {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: #777;
+}
+
+.upvotes_comments {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17.5px;
+  color: #BF3B3B;
+  float: right;
 }
