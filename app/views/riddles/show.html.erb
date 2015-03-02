@@ -10,7 +10,7 @@
 <%= form_for([@riddle, @riddle_vote]) do |f| %>
   <%= f.submit "Up"%>
 <% end %>
-  <%= @count %> upvotes
+  <span id="riddle_upvotes"><%= @count %></span> upvotes
 
 <% if @riddle.answer %>
   <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn"  %>
