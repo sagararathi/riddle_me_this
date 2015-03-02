@@ -4,21 +4,23 @@
 </div>
 
 <div class="container">
-  <h1 class="title"><%=  link_to "Unanswered Riddles", unanswered_path %></h1>
+  <div class="title"><%=  link_to "Unanswered Riddles", unanswered_path %></div>
   <% @uns_riddles.each do |r| %>
-  <div>
+  <div class="riddle-link">
     <%= link_to "#{r.title}", riddle_path(r) %>
-     | <%= r.vote_count %> upvotes
+      <span class="upvotes_comments"><%= r.vote_count %> upvotes &
+      <%= r.comments.count %> comments</span>
   </div>
   <% end %>
 
   <br>
 
-  <h1 class="title"> <%=  link_to "Answered Riddles", answered_path%></h1>
+  <div class="title"> <%=  link_to "Answered Riddles", answered_path%></div>
   <% @ans_riddles.each do |r| %>
-  <div>
+  <div class="riddle-link">
     <%= link_to "#{r.title}", riddle_path(r) %>
-     | <%= r.vote_count %> upvotes
+      <span class="upvotes_comments"><%= r.vote_count %> upvotes &
+      <%= r.comments.count %> comments</span>
   </div>
   <% end %>
 </div>
