@@ -1,0 +1,18 @@
+<div class="container">
+	<h1><%= @user.username %></h1>
+	<% if current_user %>
+		<% if @user.id == current_user.id %>
+			<%= link_to "Edit", edit_user_path(@user) %>
+			<%= link_to "Delete", user_path(@user), data: { confirm: 'Are you sure you want to delete your account?' }, method: :delete %>
+		<% end %>
+	<% end %>
+	<h3><%= @user.username %>'s Riddles:</h3>
+	<ul>
+		<% @user.riddles.each do |riddle| %>
+			<li>
+				<p><%= link_to "#{riddle.title}", riddle_path(riddle) %></p>
+				<p>Upvotes: <%= riddle.riddle_votes.count %></p>
+			</li>
+		<% end %>
+	</ul>
+</div>

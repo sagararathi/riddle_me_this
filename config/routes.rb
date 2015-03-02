@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :riddle_votes, only: [:create]
   end
 
+  resources :users, except: [:index, :new, :create]
+
   root 'riddles#index'
 
   get 'unanswered' => 'riddles#unanswered'
