@@ -12,6 +12,7 @@
   <header>
     <%= link_to "Home", root_path %> |
     <% if current_user %>
+      <%= link_to "Profile", user_path(current_user) %> |
       <%= link_to "Submit Riddle", new_riddle_path %> |
       <%= link_to "Logout", logout_path %>
     <% else %>
