@@ -1,0 +1,7 @@
+<%= form_for @user, url: signup_path(@user)  do |f| %>
+  <%= f.text_field :username, class: "form-field", placeholder: "username" %>
+  <%= f.text_field :email, class: "form-field", placeholder: "email" %>
+  <%= f.password_field :password, class: "form-field", placeholder: "password" %>
+  <%= f.password_field :password_confirmation, class: "form-field", placeholder: "confirm password" %>
+  <%= f.submit class: "btn"%>
+<% end %>

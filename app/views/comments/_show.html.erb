@@ -1,0 +1,22 @@
+<div class="comment">
+	<p><%= comment.body %></p>
+	<div class="comment_tags">
+		<%= form_for([riddle, comment, CommentVote.new]) do |f| %>
+  		<%= f.submit "Up Vote"%>
+		<% end %>
+	<span id="<%= comment.id %>"><%= comment.vote_count %></span>
+		<p>By: <%= comment.user.username %></p>
+			<% if comment.created_at.to_i == comment.updated_at.to_i %>
+				<p>At:
+			<% else %>
+				Edited at:
+			<% end %>
+			<%= comment.updated_at.ctime %></p>
+	</div>
+	<div class="comment_mods">
+		<% if session[:user_id] == comment.user_id %>
+			<%= link_to "Edit", edit_riddle_comment_path(@riddle, comment) %>
+			<%= link_to "Delete", riddle_comment_path(@riddle, comment), data: { confirm: 'Are you sure you want to delete your comment?' }, method: :delete %>
+		<% end %>
+	</div>
+</div>

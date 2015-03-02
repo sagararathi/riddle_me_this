@@ -1,0 +1,5 @@
+<%= form_tag(login_path) do%>
+  <%= text_field_tag :email, nil, class: 'form-field', placeholder: 'email' %>
+  <%= password_field_tag :password, nil, class: 'form-field', placeholder: 'password' %>
+  <%= submit_tag nil, class: "btn" %>
+<% end %>

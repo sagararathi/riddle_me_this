@@ -1,0 +1,15 @@
+<div class="container">
+  <% if is_answered(@riddles) %>
+    <div class="title">Answered Riddles</div>
+  <% else %>
+    <div class="title">Unanswered Riddles</div>
+  <% end %>
+
+  <% @riddles.each do |r| %>
+  <div class="riddle-link">
+    <%= link_to "#{r.title}", riddle_path(r) %>
+      <span class="upvotes_comments"><%= r.vote_count %> upvotes &
+      <%= r.comments.count %> comments</span>
+  </div>
+  <% end %>
+</div>
