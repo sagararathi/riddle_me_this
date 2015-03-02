@@ -1,30 +1,31 @@
-<div>
-<h2> <%= @riddle.title %></h2>
-<h4>By: <%= link_to "#{@riddle.user.username}", user_path(@riddle.user) %></h4>
-<div id='riddle_body'>
-  <%= @riddle.body %>
-</div>
+<div class="container">
+  <h2> <%= @riddle.title %></h2>
+  <div id='riddle_body'>
+    <%= @riddle.body %>
+  </div>
 
-<div id='riddle_ans' class='initiallyHidden'>
-  <%= @riddle.answer %>
-</div>
-<%= form_for([@riddle, @riddle_vote]) do |f| %>
-  <%= f.submit "Up"%>
-<% end %>
-  <span id="riddle_upvotes"><%= @count %></span> upvotes
+  <div id='riddle_ans' class='initiallyHidden'>
+    <%= @riddle.answer %>
+  </div>
 
-<% if @riddle.answer %>
-  <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn" %>
-<% end %>
-<% if current_user %>
-  <% if @riddle.user_id == current_user.id %>
-    <%= button_to 'Edit', edit_riddle_path(@riddle), method: :get %>
-    <%= form_for(@riddle, :method => :delete) do |f| %>
-      <%= f.submit "Delete"%>
+  <%= form_for([@riddle, @riddle_vote]) do |f| %>
+    <%= f.submit "Up"%>
+  <% end %>
+
+  <%= @count %> upvotes
+
+  <% if @riddle.answer %>
+    <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn"  %>
+  <% end %>
+
+  <% if current_user %>
+    <% if @riddle.user_id == current_user.id %>
+      <%= button_to 'Edit', edit_riddle_path(@riddle), method: :get %>
+      <%= form_for(@riddle, :method => :delete) do |f| %>
+        <%= f.submit "Delete"%>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
 
+  <%= render partial: 'comments/index', locals: {riddle: @riddle} %>
 </div>
-
-<%= render partial: 'comments/index', locals: {riddle: @riddle} %>

@@ -1,13 +1,15 @@
-<% if is_answered(@riddles) %>
-  <h1>Answered Riddles</h1>
-<% else %>
-  <h1>Unanswered Riddles</h1>
-<% end %>
+<div class="container">
+  <% if is_answered(@riddles) %>
+    <h1 class="title">Answered Riddles</h1>
+  <% else %>
+    <h1 class="title">Unanswered Riddles</h1>
+  <% end %>
 
-<% @riddles.each do |r| %>
-<div>
-  <%= link_to "#{r.title}", riddle_path(r) %>
-   | <%= r.vote_count %> upvotes
-   | <%= r.comments.count %> comments
+  <% @riddles.each do |r| %>
+  <div>
+    <%= link_to "#{r.title}", riddle_path(r) %>
+     | <%= r.vote_count %> upvotes
+     | <%= r.comments.count %> comments
+  </div>
+  <% end %>
 </div>
-<% end %>
