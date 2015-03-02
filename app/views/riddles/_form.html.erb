@@ -1,12 +1,9 @@
  <%= form_for @riddle do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: "form-field", placeholder: "title"  %>
 
-  <%= f.label :body %>
-  <%= f.text_area :body %>
+  <%= f.text_area :body, class: "form-field tall-form-field", placeholder: "body"  %>
 
-  <%= f.label :answer %>
-  <%= f.text_field :answer %>
+  <%= f.text_field :answer, class: "form-field", placeholder: "answer"  %>
   <%= f.hidden_field(:user_id, value: session[:user_id] ) %>
-   <%= f.submit %>
+   <%= f.submit class: "btn" %>
 <% end %>
