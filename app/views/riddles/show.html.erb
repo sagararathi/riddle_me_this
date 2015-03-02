@@ -1,5 +1,6 @@
 <div>
 <h2> <%= @riddle.title %></h2>
+<h4>By: <%= link_to "#{@riddle.user.username}", user_path(@riddle.user) %></h4>
 <div id='riddle_body'>
   <%= @riddle.body %>
 </div>
@@ -13,7 +14,7 @@
   <span id="riddle_upvotes"><%= @count %></span> upvotes
 
 <% if @riddle.answer %>
-  <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn"  %>
+  <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn" %>
 <% end %>
 <% if current_user %>
   <% if @riddle.user_id == current_user.id %>
