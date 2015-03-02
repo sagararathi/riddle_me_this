@@ -1,17 +1,24 @@
-<h1><%=  link_to "Unanswered Riddles", unanswered_path %></h1>
-<% @uns_riddles.each do |r| %>
-<div>
-  <%= link_to "#{r.title}", riddle_path(r) %>
-   | <%= r.vote_count %> upvotes
+<div class="landing-page-img">
+  <%= image_tag 'lightbulb.png', class: 'logo-img' %>
+  <div class="tagline">A riddle & answer site for the curious.</div>
 </div>
-<% end %>
 
-<br>
+<div class="container">
+  <h1 class="title"><%=  link_to "Unanswered Riddles", unanswered_path %></h1>
+  <% @uns_riddles.each do |r| %>
+  <div>
+    <%= link_to "#{r.title}", riddle_path(r) %>
+     | <%= r.vote_count %> upvotes
+  </div>
+  <% end %>
 
-<h1> <%=  link_to "Answered Riddle", answered_path%></h1>
-<% @ans_riddles.each do |r| %>
-<div>
-  <%= link_to "#{r.title}", riddle_path(r) %>
-   | <%= r.vote_count %> upvotes
+  <br>
+
+  <h1 class="title"> <%=  link_to "Answered Riddles", answered_path%></h1>
+  <% @ans_riddles.each do |r| %>
+  <div>
+    <%= link_to "#{r.title}", riddle_path(r) %>
+     | <%= r.vote_count %> upvotes
+  </div>
+  <% end %>
 </div>
-<% end %>

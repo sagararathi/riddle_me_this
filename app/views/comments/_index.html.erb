@@ -1,4 +1,3 @@
-<div class="container">
 	<%= link_to 'New Comment', '#', class: 'show_new_form'%>
 	<div class="new_comment_form initiallyHidden">
 		<%= render partial: 'comments/new', locals: {riddle: @riddle, comment: Comment.new} %>
@@ -7,4 +6,3 @@
 		<% riddle.comments.each do |comment| %>
 			<%= render partial: 'comments/show', locals: {riddle: riddle, comment: comment } %>
 		<% end %>
-</div>
