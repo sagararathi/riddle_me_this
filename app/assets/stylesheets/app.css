@@ -2,6 +2,66 @@
   display: none;
 }
 
-/*#riddle_ans {
-	display: none;
-}*/
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-top: 125px;
+}
+
+/* NAV BAR */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 60px;
+  background: rgba(0,0,0,.85);
+}
+
+.nav-link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.left-nav-link a, .right-nav-link a {
+  color: #FFF;
+}
+
+.left-nav-link {
+  float: left;
+  margin-left: 75px;
+  font-size: 25px;
+  font-family: 'Megrim';
+  margin-top: 15px;
+}
+
+.right-nav-link {
+  float: right;
+  margin-right: 75px;
+}
+
+.nav-link-1 {
+  margin-right: 35px;
+}
+
+.nav-link-1, .nav-link-2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17.5px;
+  text-transform: uppercase;
+}
+
+.form-field {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.

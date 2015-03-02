@@ -2,25 +2,30 @@
 <html>
 <head>
   <title>RiddleMeThis</title>
-
+  <%= stylesheet_link_tag 'application','http://fonts.googleapis.com/css?family=Megrim' %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Quicksand:300,400,700' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application'%>
 
   <%= csrf_meta_tags %>
+<!--   <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'> -->
 </head>
 <body>
   <header>
-    <%= link_to "Home", root_path %> |
-    <% if current_user %>
-      <%= link_to "Submit Riddle", new_riddle_path %> |
-      <%= link_to "Logout", logout_path %>
-    <% else %>
-      <%= link_to "Signup", signup_new_path %> |
-      <%= link_to "Login", login_form_path %>
-    <% end %>
+    <div class="nav-link nav-side left-nav-link"><%= link_to "RiddleMeThis", root_path %></div>
+
+    <div class="nav-side right-nav-link">
+      <% if current_user %>
+        <div class="nav-link nav-link-1"><%= link_to "Submit Riddle", new_riddle_path %></div>
+        <div class="nav-link nav-link-2"><%= link_to "Logout", logout_path %></div>
+      <% else %>
+        <div class="nav-link nav-link-1"><%= link_to "Signup", signup_new_path %></div>
+        <div class="nav-link nav-link-2"><%= link_to "Login", login_form_path %></div>
+      <% end %>
+    </div>
+
   </header>
-
+  <div class="container"></div>
 <%= yield %>
-
 </body>
 </html>
