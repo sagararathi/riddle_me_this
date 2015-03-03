@@ -1,8 +1,7 @@
 <div class="container">
-  <h1 class="header">Edit your comment</h1>
 
   <%= form_for [@riddle, @comment] do |f| %>
-    <%= f.text_area :body, class: "form-field", placeholder: "comment"  %>
+    <%= f.text_area :body, class: "form-field .tall-form-field comment-form-field", placeholder: "comment"  %>
 
     <%= f.submit class: "btn inline-btn" %>
   <% end %>
