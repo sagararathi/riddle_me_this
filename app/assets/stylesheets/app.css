@@ -188,3 +188,22 @@ input:focus, textarea { outline: none !important; }
   color: #BF3B3B;
   float: right;
 }
+
+.heart-img {
+  width: 20px;
+  opacity: .5;
+  margin-bottom: -5px;
+}
+
+.footer {
+  background-color: rgb(234,238,235);
+  margin-top: 75px;
+  padding: 25px 0px 25px 0px;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: 'Quicksand', sans-serif;
+  color: #777;
+  font-size: 17.5px;
+}
