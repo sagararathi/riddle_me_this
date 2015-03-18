@@ -1,10 +1,19 @@
 body {
   margin: 0px;
   font-family: 'Quicksand', sans-serif;
+  color: #212121;
+}
+
+.btn:hover {
+  opacity: .75;
 }
 
 .initiallyHidden {
   display: none;
+  text-align: center;
+  color: #BF3B3B;
+  font-size: 20px;
+  padding-bottom: 25px;
 }
 
 a {
@@ -84,7 +93,7 @@ input:focus, textarea { outline: none !important; }
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  border-radius: 0;
+  border-radius: 2.5px;
   padding: 15px 30px 15px 30px;
   font-size: 15px;
   text-transform: uppercase;
@@ -183,7 +192,7 @@ input:focus, textarea { outline: none !important; }
 
 .heart-img {
   width: 20px;
-  opacity: .5;
+  opacity: .45;
   margin-bottom: -5px;
 }
 
@@ -229,6 +238,7 @@ input:focus, textarea { outline: none !important; }
   border-radius: 0;
   font-size: 15px;
   display: inline-block;
+  font-weight: 400;
 }
 
 .comment_tags {
@@ -243,10 +253,55 @@ input:focus, textarea { outline: none !important; }
 .riddle_title {
   font-size: 35px;
   margin-bottom: 10px;
+  color: #212121;
+}
+
+#riddle_body {
+  color: #212121;
+  font-size: 20px;
 }
 
 .show_new_form {
-  color: #BF3B3B;
+  color: rgba(0,0,0,0.0);
   float: right;
   font-size: 15px;
+  background: url(add_comment.png) no-repeat;
+  opacity: 0.5;
+  background-position: 50% 50%;
+  background-size: contain;
+  margin-top: -7.5px;
+  width: 30px;
+}
+
+.answer_title {
+  margin: 45px 0px 10px 0px;
+  font-size: 25px;
+  font-weight: 400;
+  color: #999;
+  background-image:
+}
+
+.riddle-top {
+  background-color: #FFF;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.new_comment_form {
+  margin-top: 25px;
+}
+
+.ans_btn {
+  font-family: 'Sacramento', cursive;
+  text-transform: none;
+  background-color: rgba(0,0,0,0.0);
+  color: #BF3B3B;
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+input, textarea, keygen, select, button  {
+  font-family: 'Quicksand';
 }
