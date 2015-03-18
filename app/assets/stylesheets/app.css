@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .initiallyHidden {
@@ -53,7 +54,6 @@ header {
 }
 
 .nav-link-1, .nav-link-2 {
-  font-family: 'Quicksand', sans-serif;
   font-size: 17.5px;
   text-transform: uppercase;
 }
@@ -68,7 +68,6 @@ input:focus, textarea { outline: none !important; }
   padding: 15px;
   font-size: 15px;
   margin-bottom: 10px;
-  font-family: 'Quicksand', sans-serif;
   color: #212121;
   border: 1px solid #212121;
 }
@@ -87,13 +86,12 @@ input:focus, textarea { outline: none !important; }
   margin-bottom: 15px;
   border-radius: 0;
   padding: 15px 30px 15px 30px;
-  font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   text-transform: uppercase;
   margin-top: 20px;
 }
 
-@media (max-width: 500px) { /* CREATE MEDIA QUERY */
+@media (max-width: 500px) {
   .left-nav-link {
     margin-left: 25px;
   }
@@ -109,7 +107,6 @@ input:focus, textarea { outline: none !important; }
 
 .header {
   text-align: center;
-  font-family: 'Quicksand', sans-serif;
   color: #212121;
 }
 
@@ -127,7 +124,6 @@ input:focus, textarea { outline: none !important; }
 .landing-page-img {
   margin-top: -125px;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,0.65) 100%), url(reading.jpg) no-repeat;
-  /*background: url(../imgs/brooklyn.png);*/
   background-position: 50% 50%;
   border-bottom: 1px solid #F0F0F0;
   background-size: cover;
@@ -155,7 +151,6 @@ input:focus, textarea { outline: none !important; }
 .title {
   text-decoration: none;
   color: #212121;
-  font-family: 'Quicksand', sans-serif;
   padding-bottom: 15px;
   border-bottom: 1px solid #C0C0C0;
   font-size: 35px;
@@ -171,19 +166,16 @@ input:focus, textarea { outline: none !important; }
 }
 
 .riddle-link a {
-  font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   color: #777;
 }
 
 .riddle-link a, .riddle-link a:visited {
-  font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   color: #777;
 }
 
 .upvotes_comments {
-  font-family: 'Quicksand', sans-serif;
   font-size: 17.5px;
   color: #BF3B3B;
   float: right;
@@ -205,14 +197,12 @@ input:focus, textarea { outline: none !important; }
 }
 
 .footer-text {
-  font-family: 'Quicksand', sans-serif;
   color: #777;
   font-size: 17.5px;
 }
 
 .comment {
   border-top: 1px solid #C0C0C0;
-  font-family: 'Quicksand', sans-serif;
   text-align: justify;
   padding: 25px 25px 25px 25px;
 }
@@ -237,7 +227,6 @@ input:focus, textarea { outline: none !important; }
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   border-radius: 0;
-  font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   display: inline-block;
 }
@@ -249,4 +238,15 @@ input:focus, textarea { outline: none !important; }
 .comment-form-field {
   height: 200px;
   width: 75%;
+}
+
+.riddle_title {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.show_new_form {
+  color: #BF3B3B;
+  float: right;
+  font-size: 15px;
 }

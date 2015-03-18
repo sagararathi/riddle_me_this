@@ -2,17 +2,23 @@
 	<div class="comment-body"><%= comment.body %></div>
 
 	<div class="comment_tags">
-		<div class="comment-btn" id="<%= comment.id %>"><%= comment.vote_count %></div>
+		<div class="comment-btn" id="<%= comment.id %>">
+			<%= comment.vote_count %>
+		</div>
+
 		<div class="comment-btn">
 			<%= form_for([riddle, comment, CommentVote.new]) do |f| %>
 	  		<%= f.submit "| upvote", class: "comment-btn" %>
 			<% end %>
 		</div>
+
 		<div class="comment_mods comment-btn">
 			<% if session[:user_id] == comment.user_id %>
+
 			<div class="comment-btn">
 				<%= link_to "| Edit |", edit_riddle_comment_path(@riddle, comment), class: 'comment-btn' %>
 			</div>
+
 				<%= link_to "Delete", riddle_comment_path(@riddle, comment), data: { confirm: 'Are you sure you want to delete your comment?' }, method: :delete, class: 'comment-btn' %>
 			<% end %>
 		</div>
