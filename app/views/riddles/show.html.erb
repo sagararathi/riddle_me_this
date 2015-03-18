@@ -1,22 +1,29 @@
 <div class="container">
-  <h2> <%= @riddle.title %></h2>
+  <div class="riddle_title">
+    <%= @riddle.title %>
+  </div>
+
   <div id='riddle_body'>
     <%= @riddle.body %>
   </div>
+
+  <% if @riddle.answer %>
+    <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn btn"  %>
+  <% end %>
 
   <div id='riddle_ans' class='initiallyHidden'>
     <%= @riddle.answer %>
   </div>
 
-  <%= form_for([@riddle, @riddle_vote]) do |f| %>
-    <%= f.submit "Up"%>
-  <% end %>
+  <div class="comment-btn">
+    <%= @count %>
+  </div>
 
-  <%= @count %> upvotes
-
-  <% if @riddle.answer %>
-    <%= button_to "Show Answer", @riddle.answer, form_class: 'show_ans', class: "ans_btn"  %>
-  <% end %>
+  <div class="comment-btn">
+    <%= form_for([@riddle, @riddle_vote]) do |f| %>
+      <%= f.submit "| upvote", class: "comment-btn"%>
+    <% end %>
+  </div>
 
   <% if current_user %>
     <% if @riddle.user_id == current_user.id %>
