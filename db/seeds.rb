@@ -58,8 +58,7 @@ answer: "There weren’t any stairs, it was a one story house!", user_id: (rand(
 Riddle.create( title: "A dad and his son were ...", body: "A dad and his son were riding their bikes and crashed. Two ambulances came and took them to different hospitals. The man’s son was in the operating room and the doctor said, “I can’t operate on you. You’re my son.” How is that possible?",
 answer: "The doctor is his mom!", user_id: (rand(10) + 1) )
 
-Riddle.create( title: "What goes up when rain ...", body: "What goes up when rain comes down?",
-answer: "An umbrella!", user_id: (rand(10) + 1) )
+Riddle.create( title: "What goes up when rain ...", body: "What goes up when rain comes down?", user_id: (rand(10) + 1) )
 
 Riddle.create( title: "What is the longest wor...", body: "What is the longest word in the dictionary?",
 answer: "Smiles, because there is a mile between each ‘s’", user_id: (rand(10) + 1) )
@@ -76,8 +75,7 @@ answer: "Short", user_id: (rand(10) + 1) )
 Riddle.create( title: "What travels around the...", body: "What travels around the world but stays in one spot?",
 answer: "A stamp!", user_id: (rand(10) + 1) )
 
-Riddle.create( title: "What occurs once in a m...", body: "What occurs once in a minute, twice in a moment and never in one thousand years?",
-answer: "The letter M", user_id: (rand(10) + 1) )
+Riddle.create( title: "What occurs once in a m...", body: "What occurs once in a minute, twice in a moment and never in one thousand years?", user_id: (rand(10) + 1) )
 
 Riddle.create( title: "What has 4 eyes but can...", body: "What has 4 eyes but can’t see?",
 answer: "Mississippi", user_id: (rand(10) + 1) )
@@ -133,8 +131,7 @@ answer: "A Catcher and Umpire.", user_id: (rand(10) + 1) )
 Riddle.create( title: "Which weighs more, a po...", body: "Which weighs more, a pound of feathers or a pound of bricks?",
 answer: "Neither, they both weigh one pound!", user_id: (rand(10) + 1) )
 
-Riddle.create( title: "How many months have 28...", body: "How many months have 28 days?",
-answer: "All 12 months!", user_id: (rand(10) + 1) )
+Riddle.create( title: "How many months have 28...", body: "How many months have 28 days?", user_id: (rand(10) + 1) )
 
 Riddle.create( title: "A frog jumped into a po...", body: "A frog jumped into a pot of cream and started treading. He soon felt something solid under his feet and was able to hop out of the pot. What did the frog feel under his feet?",
 answer: "The frog felt butter under his feet, because he churned the cream and made butter.", user_id: (rand(10) + 1) )
@@ -196,8 +193,7 @@ answer: "The fishing trip consists of a grandfather, a father and a son.", user_
 Riddle.create( title: "What has 4 legs in the ...", body: "What has 4 legs in the morning, 2 legs in the afternoon, and 3 legs at night?",
 answer: "A person! As a baby you crawl (4 legs), as an adult you walk (2 legs), then when you are older you use a cane (3 legs)", user_id: (rand(10) + 1) )
 
-Riddle.create( title: "The more it dries, the ...", body: "The more it dries, the wetter it becomes. What is it?",
-answer: "A towel!", user_id: (rand(10) + 1) )
+Riddle.create( title: "The more it dries, the ...", body: "The more it dries, the wetter it becomes. What is it?", user_id: (rand(10) + 1) )
 
 Riddle.create( title: "What can you hear but n...", body: "What can you hear but not touch or see?",
 answer: "Your voice.", user_id: (rand(10) + 1) )
@@ -220,8 +216,7 @@ answer: "Today and tomorrow.", user_id: (rand(10) + 1) )
 Riddle.create( title: "What is round on both s...", body: "What is round on both sides but high in the middle?",
 answer: "Ohio.", user_id: (rand(10) + 1) )
 
-Riddle.create( title: "If two’s company and th...", body: "If two’s company and three’s a crowd, what are four and five?",
-answer: "Nine!", user_id: (rand(10) + 1) )
+Riddle.create( title: "If two’s company and th...", body: "If two’s company and three’s a crowd, what are four and five?", user_id: (rand(10) + 1) )
 
 Riddle.create( title: "What is the center of G...", body: "What is the center of Gravity?",
 answer: "The letter V.", user_id: (rand(10) + 1) )
