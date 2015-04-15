@@ -312,6 +312,7 @@ input:focus, textarea { outline: none !important; }
 
 .answers {
   margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .ans_btn {
