@@ -4,6 +4,11 @@ body {
   color: #212121;
 }
 
+.title a, .title a:visited {
+  text-decoration: none;
+  color: #212121;
+}
+
 .btn:hover {
   opacity: .75;
 }
