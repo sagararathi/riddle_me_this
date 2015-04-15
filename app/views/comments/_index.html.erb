@@ -2,7 +2,7 @@
 	<div class="new_comment_form initiallyHidden">
 		<%= render partial: 'comments/new', locals: {riddle: @riddle, comment: Comment.new} %>
 	</div>
-	<div>Answers</div>
+	<div class="answers">Answers</div>
 		<% riddle.comments.each do |comment| %>
 			<%= render partial: 'comments/show', locals: {riddle: riddle, comment: comment } %>
 		<% end %>
